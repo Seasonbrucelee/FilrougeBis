@@ -1,0 +1,204 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Ubuntu', sans-serif; 
+    font-size: 100%
+}
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Ubuntu&display=swap');
+body {
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #031472;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+header nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    width: 100%;
+}
+ul li{
+    list-style-type: none;
+    width: 100%;
+    background-color: #031472;
+    color: #b4351c;
+    font-family: 'Ubuntu', sans-serif;  
+    font-size: 30px;
+}
+ul{
+    display: flex;
+    height: 150px;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0px;
+    text-decoration: #0c49df 1px solid;
+}
+li{
+    display: flex;
+    padding: 0;
+    margin: 0%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;  
+}
+a{
+    color:#b4351c;
+}
+a:hover{
+    color: #0c49df;
+}
+main{
+    padding: 0;
+    margin: 0;
+}
+main>figure{
+    overflow: hidden;
+}
+main>figure img{
+    width: 100%;
+    display: block;
+    position: relative;
+}
+/*********** SECTION ARTICLE **********/
+main section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+main article {
+    position: relative;
+    margin-bottom: 70px;
+    margin-top: 70px;
+    width: 70%;
+}
+article {
+    width: 47%;
+    margin-bottom: 40px;
+}
+article figure img{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/********************** FOOTER NAV *************************/
+
+
+/*****FOOTER SOCIAL MEDIA***/
+footer section{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+footer section+section a {
+    margin:0 25px;
+    transition: opacity 400ms ease-out;
+}
+footer section+section a:hover, footer section+section a:focus {
+    opacity: 0.5;
+}
+/* ........ footer copyright ........ */
+footer section+p {
+    color: #e7e7e7;
+    font-size: 0.78em;
+    text-align: center;
+}
+
+@media only screen and (min-width:577px) {
+    /* ============================= global layout =============================== */
+    html{
+        font-size: 50%;
+    }
+    header>div, footer>div, main  {
+        max-width: 1052px;
+        margin: 0 auto;
+    }
+    /* =================================== header =================================== */
+    header>div {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        padding: 30px 0;
+    }
+    /* ........ logo & slogan ......... */
+    header section:first-child h1 {
+        text-align: left;
+    }
+    /* ........ message & navigation ......... */
+    header section+section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 35%;
+    }
+    header section+section p {
+        margin: 0 0 25px 0;
+    }
+    header section+section nav {
+        width:100%;
+    }
+    /* =================================== main =================================== */
+    main {
+        padding: 25px 0 0 0;
+    }
+    /* ........ large image ......... */
+    main>figure img {
+        width: 100%;
+        position: static;
+    }
+    /* ........ articles ......... */
+    main section {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    main article {
+        position: relative;
+        margin-bottom: 70px;
+        width: 35%;
+    }
+    /* =================================== footer =================================== */
+    /* ........ footer nav ......... */
+    footer nav {
+        width: 50%;
+        left: 25%;
+    }
+    footer nav li+li::before {
+        left: -48px;
+    }
+    /* ........ footer div ....... */
+    footer>div {
+        padding-top: 65px;
+    }
+    /* ........ arguments ......... */
+    footer nav+section article {
+        width: 22%;
+    }
+    footer nav+section article figure {
+        width: 30%;
+    }
+    /* ........ social ......... */
+    footer section+section a {
+        margin: 0 35px;
+    }
+}
+
+
+
