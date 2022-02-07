@@ -1,4 +1,6 @@
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 html{
@@ -21,6 +23,7 @@ nav ul {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin: 20px;
 }
 ul li{
     list-style-type: none;
@@ -57,11 +60,18 @@ main>figure img{
     display: block;
     position: relative;
 }
+h1{
+    color: #b4351c;
+    text-align: center;
+    text-decoration:underline;
+    font-size: 50px;
+    margin: 20px;
+}
 /*********** SECTION ARTICLE **********/
 main section{
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
 }
 main article {
@@ -70,14 +80,18 @@ main article {
     margin-top: 70px;
     width: 70%;
 }
-article {
-    width: 47%;
-    margin-bottom: 40px;
+article{
+    display: flex;
+    flex-direction: column;
 }
 h2{
+    display: flex;
+    flex-direction: column;
     color: #b4351c;
     text-align: center;
+    align-items: center;
     font-size: 30px;
+    margin: 20px;
 }
 p{
     color:#0c49df;
@@ -90,42 +104,47 @@ article figure img{
     flex-direction: row;
     flex-wrap: wrap;
 }
+article iframe{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-self: center;
+    margin: 10px;
+}
+/*aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}*/
+aside iframe{
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+}
 /********************** FOOTER NAV *************************/
 
 footer{
     padding: 0px 0px 0px 0px;
 } 
 footer nav{
-    padding-left: 150px;
+    display: flex;
+    flex-direction: row;
 }
 footer nav ul{
     display: flex;
     flex-direction: column;
+   /* justify-content: left;*/
     margin: 0%;
     padding: 10px;
     width: 100%;
 }
-footer ul li{
+footer nav ul li{
     list-style-type: none;
     width: 100%;
-    align-items: center;
-    text-align: center;
     background-color: #031472;
-    color: #b4351c;
     font-family: 'Ubuntu', sans-serif;  
     font-size: 30px;
-}
-footer ul{
-    display: flex;
-    flex-direction:column;
-    margin: 0px;
-    width: 100%;
-    text-decoration: #0c49df 1px solid;
-}
-footer li{
-    padding: 0;
-    margin-right: 10px;
-    align-items: center;
 }
 a{
     color:#b4351c;
@@ -138,7 +157,12 @@ a:hover{
 footer section{
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+}
+footer figure{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    padding: 10px;
 }
 footer section+section a {
     margin:0 25px;
@@ -153,25 +177,19 @@ footer section+p {
     text-align: center;
 }
 
-@media only screen and (min-width:1030px) {
+@media all and (min-width:1030px) {
     /* ============================= global layout =============================== */
     html{
         font-size: 50%;
-      
     }
     header {
         display: flex;
         flex-direction: row;
     }
-    header nav{
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-    }
     header nav ul{
         display: flex;
         flex-direction: row;
-        width: 100%;
+        width: auto;
     }
     header nav ul li{
         width: auto;
@@ -187,6 +205,7 @@ footer section+p {
     main>figure img {
         width: 100%;
         position: static;
+        padding: 10px;
     }
     /* ........ articles ......... */
     main section {
@@ -204,13 +223,23 @@ footer section+p {
     footer nav{
         display: flex;
         flex-direction: row;
-        width: 100%;
+        width: 100%
     }
     footer nav ul{
         display: flex;
         flex-direction: row;
+       /* justify-content: center;*/
         width: 100%;
     }
+    footer nav ul li{
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+       /* background-color: yellow;*/
+        font-family: 'Ubuntu', sans-serif;  
+        font-size: 30px;
+    }
+    
     /* ........ footer div ....... */
     footer>div {
         padding-top: 65px;
@@ -226,7 +255,6 @@ footer section+p {
     footer section+section a {
         margin: 0 35px;
     }
-    
 }
 
 
